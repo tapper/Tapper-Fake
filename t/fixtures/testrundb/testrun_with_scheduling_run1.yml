@@ -1,0 +1,129 @@
+---
+
+# -------------------- users
+
+- schema: User
+  name: sschwigo
+  data:
+    id: 12
+    name: Steffen Schwigon
+    login: sschwigo
+    password: verysecret
+
+# -------------------- topics
+
+- schema: Topic
+  name: software
+  data:
+    name: Software
+    description: any non-kernel software, e.g., libraries, programs
+
+
+# -------------------- preconditions
+
+- schema: Precondition
+  name: artemis-tools
+  data:
+    id: 1
+    shortname: Short_precondition
+    precondition: |
+      precondition_type: testprogram
+      timeout: 1
+
+- schema: Precondition
+  name: artemis-tools
+  data:
+    id: 2
+    shortname: Medium_precondition
+    precondition: |
+      precondition_type: testprogram
+      timeout: 5
+
+- schema: Precondition
+  name: artemis-tools
+  data:
+    id: 3
+    shortname: Medium_precondition
+    precondition: |
+      precondition_type: testprogram
+      timeout: 25
+
+# -------------------- "queues"
+
+- schema: Queue
+  name: Xen Queue
+  data:
+    id: 1
+    name: Xen
+    priority: 300
+    active: 1
+
+- schema: Queue
+  name: KVM Queue
+  data:
+    id: 2
+    name: KVM
+    priority: 200
+    active: 1
+
+- schema: Queue
+  name: Kernel Queue
+  data:
+    id: 3
+    name: Kernel
+    priority: 10
+    active: 1
+
+
+- schema: Queue
+  name: Kernel Queue
+  data:
+    id: 4
+    name: AdHoc
+    priority: 1000
+    active: 1
+
+
+
+
+# -------------------- hosts --------------------
+
+- schema: Host
+  name: iring
+  data:
+    id: 5
+    name: iring
+    free: 1
+    active: 1
+
+- schema: Host
+  name: bullock
+  data:
+    id: 6
+    name: bullock
+    free: 1
+    active: 1
+
+- schema: Host
+  name: dickstone
+  data:
+    id: 7
+    name: dickstone
+    free: 1
+    active: 1
+
+- schema: Host
+  name: athene
+  data:
+    id: 8
+    name: athene
+    free: 1
+    active: 1
+
+- schema: Host
+  name: bascha
+  data:
+    id: 9
+    name: bascha
+    free: 1
+    active: 1
