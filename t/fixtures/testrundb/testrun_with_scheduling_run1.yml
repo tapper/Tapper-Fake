@@ -43,7 +43,7 @@
   name: artemis-tools
   data:
     id: 3
-    shortname: Medium_precondition
+    shortname: Long_precondition
     precondition: |
       precondition_type: testprogram
       timeout: 25
