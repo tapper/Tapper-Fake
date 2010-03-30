@@ -196,7 +196,7 @@ itself is put outside of function to allow testing.
                 my ($self, $lastrun) = @_;
                 my $timeout          = $lastrun + $self->cfg->{times}{poll_intervall} - time();
 
-                sleep $timeout;
+#                sleep $timeout;
                 $self->handle_dead_children() if $self->dead_child;
 
                 while ( my @jobs = $self->scheduler->get_next_job() ) {
