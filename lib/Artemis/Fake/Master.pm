@@ -2,7 +2,7 @@ use MooseX::Declare;
 
 
 
-
+## no critic (RequireUseStrict)
 class Artemis::Fake::Master extends Artemis::Fake
 {
         use Devel::Backtrace;
