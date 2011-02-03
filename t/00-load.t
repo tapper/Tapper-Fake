@@ -10,9 +10,9 @@ use MRO::Compat;
 
 use Test::More;
 
-my @modules = ('Artemis::Fake', 
-               'Artemis::Fake::Child',
-               'Artemis::Fake::Master',
+my @modules = ('Tapper::Fake', 
+               'Tapper::Fake::Child',
+               'Tapper::Fake::Master',
               );
 
 plan tests => $#modules+1;
@@ -21,4 +21,4 @@ foreach my $module(@modules) {
         require_ok($module);
 }
 
-diag( "Testing Artemis $Artemis::Fake::VERSION,Perl $], $^X" );
+diag( "Testing Tapper $Tapper::Fake::VERSION,Perl $], $^X" );

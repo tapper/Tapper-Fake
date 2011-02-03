@@ -22,7 +22,7 @@
 # -------------------- preconditions
 
 - schema: Precondition
-  name: artemis-tools
+  name: tapper-tools
   data:
     id: 1
     shortname: Short_precondition
@@ -31,7 +31,7 @@
       timeout: 1
 
 - schema: Precondition
-  name: artemis-tools
+  name: tapper-tools
   data:
     id: 2
     shortname: Medium_precondition
@@ -40,7 +40,7 @@
       timeout: 5
 
 - schema: Precondition
-  name: artemis-tools
+  name: tapper-tools
   data:
     id: 3
     shortname: Long_precondition

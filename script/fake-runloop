@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-use Artemis::Fake::Master;
+use Tapper::Fake::Master;
 use Log::Log4perl;
 
 my $logconf = 'log4perl.rootlogger = ERROR, Screen
@@ -12,6 +12,6 @@ log4perl.appender.Screen.layout.ConversionPattern = %m%n';
 
 Log::Log4perl->init(\$logconf);
 
-my $mcp = Artemis::Fake::Master->new();
+my $mcp = Tapper::Fake::Master->new();
 
 $mcp->run();

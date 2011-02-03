@@ -3,26 +3,26 @@ use MooseX::Declare;
 
 
 ## no critic (RequireUseStrict)
-class Artemis::Fake::Master extends Artemis::Fake
+class Tapper::Fake::Master extends Tapper::Fake
 {
         use Devel::Backtrace;
         use POSIX ":sys_wait_h";
         use UNIVERSAL;
 
 
-        use Artemis::Fake::Child;
-        use Artemis::MCP::Scheduler::Controller;
-        use Artemis::Model 'model';
+        use Tapper::Fake::Child;
+        use Tapper::MCP::Scheduler::Controller;
+        use Tapper::Model 'model';
 
 
 =head1 NAME
 
-Artemis::Fake::Master - Fake Artemis::MCP::Master for testing purpose
+Tapper::Fake::Master - Fake Tapper::MCP::Master for testing purpose
 
 =head1 SYNOPSIS
 
- use Artemis::Fake::Master;
- my $mcp = Artemis::Fake::Master->new();
+ use Tapper::Fake::Master;
+ my $mcp = Tapper::Fake::Master->new();
  $mcp->run();
 
 =head1 Attributes
@@ -59,7 +59,7 @@ Associated Scheduler object.
 
 =cut
 
-        has scheduler    => (is => 'rw', isa => 'Artemis::MCP::Scheduler::Controller');
+        has scheduler    => (is => 'rw', isa => 'Tapper::MCP::Scheduler::Controller');
 
 =head1 FUNCTIONS
 
@@ -68,7 +68,7 @@ Associated Scheduler object.
 sub BUILD
 {
         my $self = shift;
-        $self->scheduler(Artemis::MCP::Scheduler::Controller->new());
+        $self->scheduler(Tapper::MCP::Scheduler::Controller->new());
 }
 
 
@@ -166,7 +166,7 @@ Run the tests that are due.
                 # hello child
                 if ($pid == 0) {
 
-                        my $child = Artemis::Fake::Child->new( $id );
+                        my $child = Tapper::Fake::Child->new( $id );
                         my $retval = $child->runtest_handling( $system );
                         if ($retval) {
                                 $self->log->error("An error occured while trying to run testrun $id on $system: $retval");
@@ -220,7 +220,7 @@ Create communication data structures used in MCP.
                 my ($self) = @_;
                 # these sets are used by select()
 
-                my $allhosts = model('HardwareDB')->resultset('Systems')->search({active => 1, current_owner => {like => '%artemis%'}});
+                my $allhosts = model('HardwareDB')->resultset('Systems')->search({active => 1, current_owner => {like => '%tapper%'}});
                 while (my $thishost = $allhosts->next) {
                         push(@{$self->hosts}, $thishost->systemname);
                 }
@@ -264,7 +264,7 @@ None.
 
 You can find documentation for this module with the perldoc command.
 
- perldoc Artemis
+ perldoc Tapper
 
 
 =head1 ACKNOWLEDGEMENTS

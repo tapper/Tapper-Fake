@@ -1,4 +1,4 @@
-package Artemis::Fake;
+package Tapper::Fake;
 
 use warnings;
 use strict;
@@ -7,7 +7,7 @@ our $VERSION = '2.000001';
 
 
 
-use Artemis::Config;
+use Tapper::Config;
 use Moose;
 
 extends 'Tapper::Base';
@@ -15,16 +15,16 @@ extends 'Tapper::Base';
 sub cfg
 {
         my ($self) = @_;
-        return Artemis::Config->subconfig();
+        return Tapper::Config->subconfig();
 }
 
 =head1 NAME
 
-Artemis::Fake - Fake Artemis::MCP for testing
+Tapper::Fake - Fake Tapper::MCP for testing
 
 =head1 SYNOPSIS
 
- use Artemis::Fake;
+ use Tapper::Fake;
 
 =cut
 
@@ -42,7 +42,7 @@ None.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Artemis::Fake
+    perldoc Tapper::Fake
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -54,4 +54,4 @@ This program is released under the following license: restrictive
 
 =cut
  
-1; # End of Artemis::Fake
+1; # End of Tapper::Fake

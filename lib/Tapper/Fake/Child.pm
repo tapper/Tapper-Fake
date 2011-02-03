@@ -1,20 +1,20 @@
-package Artemis::Fake::Child;
+package Tapper::Fake::Child;
 
 use Moose;
 
 use common::sense;
-use Artemis::Model 'model';
+use Tapper::Model 'model';
 
 
 
 =head1 NAME
 
-Artemis::Fake::Child - Fake Artemis::MCP::Child for testing
+Tapper::Fake::Child - Fake Tapper::MCP::Child for testing
 
 =head1 SYNOPSIS
 
- use Artemis::Fake::Child;
- my $client = Artemis::Fake::Child->new($testrun_id);
+ use Tapper::Fake::Child;
+ my $client = Tapper::Fake::Child->new($testrun_id);
  $child->runtest_handling($system);
 
 
@@ -79,7 +79,7 @@ None.
 
 You can find documentation for this module with the perldoc command.
 
- perldoc Artemis
+ perldoc Tapper
 
 
 =head1 ACKNOWLEDGEMENTS
