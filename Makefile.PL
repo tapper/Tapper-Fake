@@ -8,6 +8,8 @@ license  'freebsd';
 build_requires 'Test::More';
 build_requires 'Test::Perl::Critic';
 
+requires 'Artemis::Model';
+
 auto_install;
 
 WriteAll;
