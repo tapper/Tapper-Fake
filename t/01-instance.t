@@ -8,6 +8,13 @@ use Class::C3;
 use MRO::Compat;
 
 use Test::More;
+use Artemis::Schema::TestTools;
+use Test::Fixture::DBIC::Schema;
+
+# -----------------------------------------------------------------------------------------------------------------
+construct_fixture( schema  => testrundb_schema, fixture => 't/fixtures/testrundb/testrun_with_scheduling_run1.yml' );
+# -----------------------------------------------------------------------------------------------------------------
+
 
 my @modules = ('Artemis::Fake', 
                'Artemis::Fake::Child',
