@@ -35,5 +35,5 @@ foreach my $module(@modules) {
         print $@ if $@;
 }
 
-diag( "Testing Artemis $Artemis::Fake::VERSION,Perl $], $^X" );
+diag( "Testing Artemis::Fake $Artemis::Fake::VERSION,Perl $], $^X" );
 
