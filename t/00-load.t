@@ -21,4 +21,4 @@ foreach my $module(@modules) {
         require_ok($module);
 }
 
-diag( "Testing Tapper $Tapper::Fake::VERSION,Perl $], $^X" );
+diag( "Testing Tapper::Fake $Artemis::Fake::VERSION,Perl $], $^X" );

@@ -8,6 +8,13 @@ use Class::C3;
 use MRO::Compat;
 
 use Test::More;
+use Tapper::Schema::TestTools;
+use Test::Fixture::DBIC::Schema;
+
+# -----------------------------------------------------------------------------------------------------------------
+construct_fixture( schema  => testrundb_schema, fixture => 't/fixtures/testrundb/testrun_with_scheduling_run1.yml' );
+# -----------------------------------------------------------------------------------------------------------------
+
 
 my @modules = ('Tapper::Fake', 
                'Tapper::Fake::Child',
@@ -35,5 +42,5 @@ foreach my $module(@modules) {
         print $@ if $@;
 }
 
-diag( "Testing Tapper $Tapper::Fake::VERSION,Perl $], $^X" );
+diag( "Testing Tapper::Fake $Artemis::Fake::VERSION,Perl $], $^X" );
 
