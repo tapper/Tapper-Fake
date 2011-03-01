@@ -4,11 +4,8 @@ use warnings;
 use strict;
 use 5.010;
 
-our $VERSION = '1.000001';
-
 use Moose;
 use YAML::Syck;
-
 
 use Tapper::Config;
 use Tapper::Model 'model';

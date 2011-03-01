@@ -3,9 +3,7 @@ package Tapper::Fake;
 use warnings;
 use strict;
 
-our $VERSION = '2.000001';
-
-
+our $VERSION = '3.000001';
 
 use Tapper::Config;
 use Moose;
