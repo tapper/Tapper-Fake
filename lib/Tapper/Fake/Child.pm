@@ -69,7 +69,7 @@ sub runtest_handling
 
 =head1 AUTHOR
 
-OSRC SysInt Team, C<< <osrc-sysint at elbe.amd.com> >>
+AMD OSRC Tapper Team, C<< <tapper at amd64.org> >>
 
 =head1 BUGS
 
