@@ -18,7 +18,7 @@ sub cfg
 
 =head1 NAME
 
-Tapper::Fake - Fake Tapper::MCP for testing
+Tapper::Fake - Tapper - Fake modules for testing the automation layer
 
 =head1 SYNOPSIS
 
