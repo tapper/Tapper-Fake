@@ -13,7 +13,7 @@ build_requires 'Test::Perl::Critic';
 
 author_requires 'Module::Install::WriteAll';
 
-requires 'Artemis::Model';
+requires 'Tapper::Model';
 
 auto_install;
 
