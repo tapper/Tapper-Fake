@@ -17,5 +17,8 @@ requires 'Tapper::Model';
 
 auto_install;
 
+repository 'git://github.com/amd/Tapper-Fake.git';
+bugtracker 'http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tapper-Fake';
+
 WriteAll;
 
