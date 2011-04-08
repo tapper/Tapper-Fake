@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#! perl
 
 use Tapper::Fake::Master;
 use Log::Log4perl;
