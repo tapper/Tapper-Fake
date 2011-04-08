@@ -13,7 +13,7 @@ build_requires 'Test::Perl::Critic';
 
 author_requires 'Module::Install::WriteAll';
 
-requires 'Tapper::Model';
+requires 'Tapper::Model' => 3.000010";
 
 auto_install;
 
