@@ -13,9 +13,12 @@ build_requires 'Test::Perl::Critic';
 
 author_requires 'Module::Install::WriteAll';
 
-requires 'Tapper::Model';
+requires 'Tapper::Model' => 3.000010";
 
 auto_install;
+
+repository 'git://github.com/amd/Tapper-Fake.git';
+bugtracker 'http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tapper-Fake';
 
 WriteAll;
 
