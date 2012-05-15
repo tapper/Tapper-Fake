@@ -1,10 +1,9 @@
-use MooseX::Declare;
-
-
-
 ## no critic (RequireUseStrict)
-class Tapper::Fake::Master extends Tapper::Fake
-{
+package Tapper::Fake::Master;
+# ABSTRACT: Fake Tapper::MCP::Master for testing purpose
+
+        use Moose;
+        extends 'Tapper::Fake';
         use Devel::Backtrace;
         use POSIX ":sys_wait_h";
         use UNIVERSAL;
@@ -15,10 +14,6 @@ class Tapper::Fake::Master extends Tapper::Fake
         use Tapper::Model 'model';
 
 
-=head1 NAME
-
-Tapper::Fake::Master - Fake Tapper::MCP::Master for testing purpose
-
 =head1 SYNOPSIS
 
  use Tapper::Fake::Master;
@@ -26,7 +21,6 @@ Tapper::Fake::Master - Fake Tapper::MCP::Master for testing purpose
  $mcp->run();
 
 =head1 Attributes
-
 
 =head2 hosts
 
@@ -70,7 +64,6 @@ sub BUILD
         my $self = shift;
         $self->scheduler(Tapper::MCP::Scheduler::Controller->new());
 }
-
 
 =head2 set_interrupt_handlers
 
@@ -247,32 +240,6 @@ Set up all needed data structures then wait for new tests.
                 }
 
         }
-}
-
 
 1;
-
-=head1 AUTHOR
-
-AMD OSRC Tapper Team, C<< <tapper at amd64.org> >>
-
-=head1 BUGS
-
-None.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
- perldoc Tapper
-
-
-=head1 ACKNOWLEDGEMENTS
-
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2008-2011 AMD OSRC Tapper Team, all rights reserved.
-
-This program is released under the following license: freebsd
 

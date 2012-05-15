@@ -20,5 +20,3 @@ plan tests => $#modules+1;
 foreach my $module(@modules) {
         require_ok($module);
 }
-
-diag( "Testing Tapper::Fake $Tapper::Fake::VERSION,Perl $], $^X" );

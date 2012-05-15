@@ -1,15 +1,11 @@
 package Tapper::Fake::Child;
+# ABSTRACT: Fake Tapper::MCP::Child for testing
 
 use Moose;
-
 use common::sense;
 use Tapper::Model 'model';
 
-
-
-=head1 NAME
-
-Tapper::Fake::Child - Fake Tapper::MCP::Child for testing
+has testrun  => (is => 'rw');
 
 =head1 SYNOPSIS
 
@@ -17,27 +13,18 @@ Tapper::Fake::Child - Fake Tapper::MCP::Child for testing
  my $client = Tapper::Fake::Child->new($testrun_id);
  $child->runtest_handling($system);
 
-
-
-=head1 FUNCTIONS
-
-=cut 
-
-has testrun  => (is => 'rw');
-
-
 sub BUILDARGS {
         my $class = shift;
         
         if ( @_ >= 1 and not ref $_[0] ) {
                 return { testrun => $_[0] };
-  }
+        }
         else {
                 return $class->SUPER::BUILDARGS(@_);
         }
 }
 
-
+=head1 FUNCTIONS
 
 =head2 runtest_handling
 
@@ -66,28 +53,3 @@ sub runtest_handling
 }
 
 1;
-
-=head1 AUTHOR
-
-AMD OSRC Tapper Team, C<< <tapper at amd64.org> >>
-
-=head1 BUGS
-
-None.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
- perldoc Tapper
-
-
-=head1 ACKNOWLEDGEMENTS
-
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2008-2011 AMD OSRC Tapper Team, all rights reserved.
-
-This program is released under the following license: freebsd
-

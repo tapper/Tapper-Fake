@@ -41,6 +41,3 @@ foreach my $module(@modules) {
         isa_ok($obj, $module);
         print $@ if $@;
 }
-
-diag( "Testing Tapper::Fake $Tapper::Fake::VERSION,Perl $], $^X" );
-
