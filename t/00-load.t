@@ -3,14 +3,20 @@
 use strict;
 use warnings;
 
-
 # get rid of warnings
 use Class::C3;
 use MRO::Compat;
 
 use Test::More;
+use Tapper::Schema::TestTools;
+use Test::Fixture::DBIC::Schema;
 
-my @modules = ('Tapper::Fake', 
+# -----------------------------------------------------------------------------------------------------------------
+construct_fixture( schema  => testrundb_schema, fixture => 't/fixtures/testrundb/testrun_with_scheduling_run1.yml' );
+# -----------------------------------------------------------------------------------------------------------------
+
+
+my @modules = ('Tapper::Fake',
                'Tapper::Fake::Child',
                'Tapper::Fake::Master',
               );

@@ -16,7 +16,7 @@ construct_fixture( schema  => testrundb_schema, fixture => 't/fixtures/testrundb
 # -----------------------------------------------------------------------------------------------------------------
 
 
-my @modules = ('Tapper::Fake', 
+my @modules = ('Tapper::Fake',
                'Tapper::Fake::Child',
                'Tapper::Fake::Master',
               );
