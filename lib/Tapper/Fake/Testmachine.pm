@@ -12,6 +12,12 @@ use Tapper::Model 'model';
 
 extends 'Tapper::Base';
 
+=head2 cfg
+
+Returns the Tapper config.
+
+=cut
+
 sub cfg
 {
         my ($self) = @_;
@@ -110,5 +116,5 @@ Copyright 2008-2011 AMD OSRC Tapper Team, all rights reserved.
 This program is released under the following license: freebsd
 
 =cut
- 
+
 1; # End of Tapper::Fake

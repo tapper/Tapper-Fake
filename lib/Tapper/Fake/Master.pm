@@ -8,7 +8,6 @@ package Tapper::Fake::Master;
         use POSIX ":sys_wait_h";
         use UNIVERSAL;
 
-
         use Tapper::Fake::Child;
         use Tapper::MCP::Scheduler::Controller;
         use Tapper::Model 'model';
@@ -47,7 +46,7 @@ Contains all information about all child processes.
 
         has child        => (is => 'rw', isa => 'HashRef', default => sub {{}});
 
-=head2
+=head2 scheduler
 
 Associated Scheduler object.
 
@@ -57,13 +56,21 @@ Associated Scheduler object.
 
 =head1 FUNCTIONS
 
-=cut 
+=head2 BUILD
+
+Initializes scheduler on object creation.
+
+=cut
 
 sub BUILD
 {
         my $self = shift;
         $self->scheduler(Tapper::MCP::Scheduler::Controller->new());
 }
+
+=head2 WNOHANG
+
+Constant imported from POSIX.pm.
 
 =head2 set_interrupt_handlers
 
@@ -155,7 +162,7 @@ Run the tests that are due.
 
                 my $pid = fork();
                 die "fork failed: $!" if (not defined $pid);
-                
+
                 # hello child
                 if ($pid == 0) {
 
@@ -242,4 +249,3 @@ Set up all needed data structures then wait for new tests.
         }
 
 1;
-

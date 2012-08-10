@@ -9,6 +9,12 @@ use Moose;
 
 extends 'Tapper::Base';
 
+=head2 cfg
+
+Returns the Tapper config.
+
+=cut
+
 sub cfg
 {
         my ($self) = @_;
