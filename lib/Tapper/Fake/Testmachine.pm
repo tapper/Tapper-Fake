@@ -28,9 +28,10 @@ sub cfg
 
 Tapper::Fake::Testmachine - Fake a testmachine to test Tapper MCP.
 
+
+use Tapper::Fake::Testmachine;
 my $fake = Tapper::Fake::Testmachine->new();
-my $args = $fake->parse_args();
-$fake->run($args);
+$fake->run({hostname => $hostname});
 
 
 =head1 SYNOPSIS
@@ -38,22 +39,6 @@ $fake->run($args);
  use Tapper::Fake::Testmachine;
 
 =cut
-
-=head2 parse_args
-
-Get options from command line arguments.
-
-@return hash ref - arguments
-
-=cut
-
-sub parse_args
-{
-        my ($self) = @_;
-        my $args;
-        $args->{hostname} = $ARGV[0] or die "No host given";
-        return $args;
-}
 
 =head2 run
 
