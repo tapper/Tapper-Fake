@@ -1,5 +1,7 @@
 #!/usr/bin/env perl
 
+#PODNAME: fake_testmachine
+
 use strict;
 use warnings;
 use 5.010;
