@@ -69,13 +69,22 @@ sub run
         }
         my $testrun_id = $config->{test_run};
         my $message = model('TestrunDB')->resultset('Message')->new({testrun_id => $testrun_id,
-                                                                     message    => {state => 'start-install'}});
-        $message->insert;
-
+                                                                     message    => {state => 'start-install'}})->insert;
         $message = model('TestrunDB')->resultset('Message')->new({testrun_id => $testrun_id,
-                                                                  message    => {state => 'end-install'}});
-        $message->insert;
-
+                                                                  message    => {state => 'end-install'}})->insert;
+        $message = model('TestrunDB')->resultset('Message')->new({testrun_id => $testrun_id,
+                                                                  message    => {state => 'start-testing',
+                                                                                 prc_number => 0,
+                                                                                }})->insert;
+        $message = model('TestrunDB')->resultset('Message')->new({testrun_id => $testrun_id,
+                                                                  message    => {state => 'end-testprogram',
+                                                                                 prc_number => 0,
+                                                                                 testprogram => 0,
+                                                                                }})->insert;
+        $message = model('TestrunDB')->resultset('Message')->new({testrun_id => $testrun_id,
+                                                                  message    => {state => 'start-testing',
+                                                                                 prc_number => 0,
+                                                                                }})->insert;
         exit;
 }
 
