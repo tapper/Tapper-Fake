@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use 5.010;
+
+die "Usage $0 \$hostname" unless $ARGV[0];
+
+use Tapper::Fake::Testmachine;
+my $fake = Tapper::Fake::Testmachine->new();
+$fake->run({hostname => $ARGV[0]});
