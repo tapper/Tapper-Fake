@@ -3,6 +3,7 @@ package Tapper::Fake::Testmachine;
 use warnings;
 use strict;
 use 5.010;
+use autodie;
 
 use Moose;
 use YAML::Syck;
@@ -54,8 +55,8 @@ sub run
         if ($pid != 0) {
                 return;
         }
-        open (STDOUT, ">", "/dev/null");
-        open (STDERR, ">", "/dev/null");
+        close (STDOUT);
+        close (STDERR);
         sleep 1; # give MCP time to settle
 
         my $hostname = $options->{hostname};
