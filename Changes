@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+4.1.0     2012-10-19
         - provide a fake MCP
           (quite a special thingie, ask someone before use)
         - more elaborate init for more elaborate test
