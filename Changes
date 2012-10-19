@@ -2,7 +2,7 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
         - provide a fake MCP
-          (a quite special thingie, ask someone before use)
+          (quite a special thingie, ask someone before use)
         - more elaborate init for more elaborate test
         - big Dist::Zilla roundhouse kick
 
